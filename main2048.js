@@ -125,7 +125,7 @@ $(document).keydown(function(event){
 			// left
 			event.preventDefault();
 			if(moveLeft() ){
-				setTimeout("generateOneNumber();",100);
+				setTimeout("generateOneNumber();",210);
 				setTimeout("isgameover()",300);
 			}
 			break;
@@ -133,7 +133,7 @@ $(document).keydown(function(event){
 			// up
 			event.preventDefault();
 			if(moveUp() ){
-				setTimeout("generateOneNumber();",100);
+				setTimeout("generateOneNumber();",210);
 				setTimeout("isgameover()",300);
 			}
 			break;
@@ -141,7 +141,7 @@ $(document).keydown(function(event){
 			// Right
 			event.preventDefault();
 			if(moveRight() ){
-				setTimeout("generateOneNumber();",100);
+				setTimeout("generateOneNumber();",210);
 				setTimeout("isgameover()",300);
 			}
 			break;
@@ -149,7 +149,7 @@ $(document).keydown(function(event){
 			// down
 			event.preventDefault();
 			if(moveDown() ){
-				setTimeout("generateOneNumber();",100);
+				setTimeout("generateOneNumber();",210);
 				setTimeout("isgameover()",300);
 			}
 			break;
@@ -184,14 +184,14 @@ document.addEventListener('touchend',function(event){
         if( deltax > 0 ){
             //move right
             if( moveRight() ){
-                setTimeout("generateOneNumber()",100);
+                setTimeout("generateOneNumber()",210);
                 setTimeout("isgameover()",300);
             }
         }
         else{
             //move left
             if( moveLeft() ){
-                setTimeout("generateOneNumber()",100);
+                setTimeout("generateOneNumber()",210);
                 setTimeout("isgameover()",300);
             }
         }
@@ -200,14 +200,14 @@ document.addEventListener('touchend',function(event){
         if( deltay > 0 ){
             //move down
             if( moveDown() ){
-                setTimeout("generateOneNumber()",100);
+                setTimeout("generateOneNumber()",210);
                 setTimeout("isgameover()",300);
             }
         }
         else{
             //move up
             if( moveUp() ){
-                setTimeout("generateOneNumber()",100);
+                setTimeout("generateOneNumber()",210);
                 setTimeout("isgameover()",300);
             }
         }
