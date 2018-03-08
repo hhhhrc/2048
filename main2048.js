@@ -125,7 +125,7 @@ $(document).keydown(function(event){
 			// left
 			event.preventDefault();
 			if(moveLeft() ){
-				setTimeout("generateOneNumber();",20);
+				setTimeout("generateOneNumber();",100);
 				setTimeout("isgameover()",300);
 			}
 			break;
@@ -133,7 +133,7 @@ $(document).keydown(function(event){
 			// up
 			event.preventDefault();
 			if(moveUp() ){
-				setTimeout("generateOneNumber();",20);
+				setTimeout("generateOneNumber();",100);
 				setTimeout("isgameover()",300);
 			}
 			break;
@@ -141,7 +141,7 @@ $(document).keydown(function(event){
 			// Right
 			event.preventDefault();
 			if(moveRight() ){
-				setTimeout("generateOneNumber();",20);
+				setTimeout("generateOneNumber();",100);
 				setTimeout("isgameover()",300);
 			}
 			break;
@@ -149,7 +149,7 @@ $(document).keydown(function(event){
 			// down
 			event.preventDefault();
 			if(moveDown() ){
-				setTimeout("generateOneNumber();",20);
+				setTimeout("generateOneNumber();",100);
 				setTimeout("isgameover()",300);
 			}
 			break;
@@ -176,7 +176,7 @@ document.addEventListener('touchend',function(event){
     var deltax = endx - startx;
     var deltay = endy - starty;
 
-    if( Math.abs( deltax ) < 0.1*documentWidth && Math.abs( deltay ) < 0.1*documentWidth )
+    if( Math.abs( deltax ) < 0.05*documentWidth && Math.abs( deltay ) < 0.05*documentWidth )
         return;
 
     if( Math.abs( deltax ) >= Math.abs( deltay ) ){
@@ -184,14 +184,14 @@ document.addEventListener('touchend',function(event){
         if( deltax > 0 ){
             //move right
             if( moveRight() ){
-                setTimeout("generateOneNumber()",20);
+                setTimeout("generateOneNumber()",100);
                 setTimeout("isgameover()",300);
             }
         }
         else{
             //move left
             if( moveLeft() ){
-                setTimeout("generateOneNumber()",20);
+                setTimeout("generateOneNumber()",100);
                 setTimeout("isgameover()",300);
             }
         }
@@ -200,14 +200,14 @@ document.addEventListener('touchend',function(event){
         if( deltay > 0 ){
             //move down
             if( moveDown() ){
-                setTimeout("generateOneNumber()",20);
+                setTimeout("generateOneNumber()",100);
                 setTimeout("isgameover()",300);
             }
         }
         else{
             //move up
             if( moveUp() ){
-                setTimeout("generateOneNumber()",20);
+                setTimeout("generateOneNumber()",100);
                 setTimeout("isgameover()",300);
             }
         }
@@ -257,7 +257,7 @@ function moveLeft(){
             	}
             }
         }
-    setTimeout("updateBoardView()",20);
+    setTimeout("updateBoardView()",100);
 	return true;
 }
 
@@ -290,7 +290,7 @@ function moveRight(){
             }
         }
 
-    setTimeout("updateBoardView()",20);
+    setTimeout("updateBoardView()",100);
     return true;
 }
 
@@ -324,7 +324,7 @@ function moveUp(){
             }
         }
 
-    setTimeout("updateBoardView()",20);
+    setTimeout("updateBoardView()",100);
     return true;
 }
 
@@ -357,6 +357,6 @@ function moveDown(){
             }
         }
 
-    setTimeout("updateBoardView()",20);
+    setTimeout("updateBoardView()",100);
     return true;
 }
