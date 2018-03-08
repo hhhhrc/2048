@@ -257,7 +257,7 @@ function moveLeft(){
             	}
             }
         }
-    setTimeout("updateBoardView()",75);
+    setTimeout("updateBoardView()",90);
 	return true;
 }
 
@@ -290,7 +290,7 @@ function moveRight(){
             }
         }
 
-    setTimeout("updateBoardView()",75);
+    setTimeout("updateBoardView()",90);
     return true;
 }
 
@@ -324,7 +324,7 @@ function moveUp(){
             }
         }
 
-    setTimeout("updateBoardView()",75);
+    setTimeout("updateBoardView()",90);
     return true;
 }
 
@@ -357,6 +357,6 @@ function moveDown(){
             }
         }
 
-    ("()",50);
+    setTimeout("updateBoardView()",90);
     return true;
 }
