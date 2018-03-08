@@ -137,27 +137,31 @@ function generateOneNumber(){
 }
 
 $(document).keydown( function( event ){
-    event.preventDefault();
+
     switch( event.keyCode ){
         case 37: //left
+            event.preventDefault();
             if( moveLeft() ){
                 setTimeout("generateOneNumber()",210);
                 setTimeout("isgameover()",300);
             }
             break;
         case 38: //up
+            event.preventDefault();
             if( moveUp() ){
                 setTimeout("generateOneNumber()",210);
                 setTimeout("isgameover()",300);
             }
             break;
         case 39: //right
+            event.preventDefault();
             if( moveRight() ){
                 setTimeout("generateOneNumber()",210);
                 setTimeout("isgameover()",300);
             }
             break;
         case 40: //down
+            event.preventDefault();
             if( moveDown() ){
                 setTimeout("generateOneNumber()",210);
                 setTimeout("isgameover()",300);
@@ -180,7 +184,7 @@ document.addEventListener('touchend',function(event){
     var deltax = endx - startx;
     var deltay = endy - starty;
 
-    if( Math.abs( deltax ) < 0.3*documentWidth && Math.abs( deltay ) < 0.3*documentWidth )
+    if( Math.abs( deltax ) < 0.03*documentWidth && Math.abs( deltay ) < 0.03*documentWidth )
         return;
 
     if( Math.abs( deltax ) >= Math.abs( deltay ) ){
