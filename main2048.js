@@ -123,6 +123,7 @@ $(document).keydown(function(event){
 	switch (event.keyCode) {
 			case 37:
 			// left
+			event.preventDefault();
 			if(moveLeft() ){
 				setTimeout("generateOneNumber();",210);
 				setTimeout("isgameover()",300);
@@ -130,6 +131,7 @@ $(document).keydown(function(event){
 			break;
 			case 38:
 			// up
+			event.preventDefault();
 			if(moveUp() ){
 				setTimeout("generateOneNumber();",210);
 				setTimeout("isgameover()",300);
@@ -137,6 +139,7 @@ $(document).keydown(function(event){
 			break;
 			case 39:
 			// Right
+			event.preventDefault();
 			if(moveRight() ){
 				setTimeout("generateOneNumber();",210);
 				setTimeout("isgameover()",300);
@@ -144,6 +147,7 @@ $(document).keydown(function(event){
 			break;
 			case 40:
 			// down
+			event.preventDefault();
 			if(moveDown() ){
 				setTimeout("generateOneNumber();",210);
 				setTimeout("isgameover()",300);
@@ -159,6 +163,10 @@ $(document).keydown(function(event){
 document.addEventListener('touchstart',function(event){
     startx = event.touches[0].pageX;
     starty = event.touches[0].pageY;
+});
+
+document.addEventListener('touchmove',function(event){
+	event.preventDefault();
 });
 
 document.addEventListener('touchend',function(event){
